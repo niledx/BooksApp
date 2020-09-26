@@ -1,0 +1,22 @@
+<div class="profile-body">
+  <div class="content m-3 row mx-auto my-auto">
+    <div class="item mt-3">
+      <label>Name:</label><span> {{profile.name ? profile.name : 'Not Provided'}}</span>
+    </div>
+    <div class="item">
+      <label>Email:</label><span> {{profile.email ? profile.email : 'Not Provided'}}</span>
+    </div>
+    <div class="item">
+      <label>Phone:</label><span> {{profile.phone ? profile.phone : 'Not Provided'}}</span>
+    </div>
+    <div class="item">
+      <label>City:</label><span> {{profile.city ? profile.city : 'Not Provided'}}</span>
+    </div>
+    <div class="item">
+      <label>State:</label><span> {{profile.state ? profile.state : 'Not Provided'}}</span>
+    </div>
+    <div class="item">
+      <div class="btn btn-primary" (click)="goto('profile/edit')"><span>Edit</span></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<nav>
+  <div class="nav-item logo">
+    <div class="item-logo">
+      <span>BooksApp</span>
+    </div>
+  </div>
+  <div class="nav-item right">
+    <div class="item" *ngIf="!(status$ | async)" (click)="goTo('home')">
+      <span>Home</span>
+    </div>
+    <div class="item" *ngIf="(status$ | async)" (click)="goTo('dashboard')">
+      <span>Dashboard</span>
+    </div>
+    <div class="item" *ngIf="!(status$ | async)" (click)="goTo('auth/login')">
+      <span>Login</span>
+    </div>
+    <div class="item" *ngIf="!(status$ | async)" (click)="goTo('auth/signup')">
+      <span>Register</span>
+    </div>
+    <div class="item" *ngIf="(status$ | async)" (click)="goTo('books')">
+      <span>Books</span>
+    </div>
+    <div class="item" *ngIf="(status$ | async)" (click)="goTo('profile')"><span>Hi! {{user$ | async }}</span></div>
+    <div class="item logout" *ngIf="(status$ | async)" (click)=logout()><i class="fa fa-power-off" aria-hidden="true"></i></div>
+  </div>
+</nav>
+
+<div class="mobile">
+
+  <div class="mxlogout" *ngIf="(status$ | async)" (click)=logout()><i class="fa fa-power-off" aria-hidden="true"></i></div>
+
+  <div class="m-contain">
+    <div class="m-item" *ngIf="!(status$ | async)" (click)="goTo('home')"><span class="title">Home</span><br>
+      <span><i class="fa fa-home f-size" aria-hidden="true"></i></span>
+    </div>
+    <div class="m-item" *ngIf="(status$ | async)" (click)="goTo('dashboard')"><span class="title">Dashboard</span><br>
+      <span><i class="fa fa-bookmark f-size" aria-hidden="true"></i></span>
+    </div>
+    <div class="m-item" *ngIf="!(status$ | async)" (click)="goTo('auth/login')"><span class="title">Login</span><br>
+      <span><i class="fa fa-sign-in f-size" aria-hidden="true"></i></span>
+    </div>
+    <div class="m-item" *ngIf="!(status$ | async)" (click)="goTo('auth/signup')"><span class="title">Register</span><br>
+      <span><i class="fa fa-user-plus f-size" aria-hidden="true"></i></span>
+    </div>
+    <div class="m-item" *ngIf="(status$ | async)" (click)="goTo('books')"><span class="title">Books</span><br>
+      <span><i class="fa fa-book f-size" aria-hidden="true"></i></span>
+    </div>
+    <div class="m-item" *ngIf="(status$ | async)" (click)="goTo('profile')"><span class="title">Profile</span><br>
+      <span><i class="fa fa-user f-size" aria-hidden="true"></i></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<p class="text"><i>Enter name of the book and a respective book cover image URL in the form below!</i></p>
+<div class="grid-container">
+  <div class="grid-child">
+    <div class="input"><input type="text" placeholder="Name of book" [(ngModel)]="bookName"></div>
+    <div class="input"><input type="text" placeholder="Image URL of book" [(ngModel)]="imgURL"></div>
+  </div>
+</div>
+
+<div class="mt-2">
+  <div class="btn btn-primary" (click)="addBook()">Add</div>
+</div>

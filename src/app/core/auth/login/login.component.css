@@ -1,0 +1,75 @@
+.contain {
+	width: 100vw;
+	height: 90vh;
+	margin: 0;
+	padding: 0;
+  background-image: linear-gradient(45deg, #b4223b, #5d188b);
+  color: white;
+}
+
+.loginForm {
+	height: 80vh;
+	width: auto;
+	background-color: rgba(0, 128, 128, 0.164);
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.col-aligncenter {
+	float: none;
+	margin: 0 auto;
+}
+
+input{
+  color: black;
+  border-radius: 5px;
+  width: 20vw;
+}
+
+.submit{
+  display: inline-block;
+  background-color: #019421de;
+  border-radius: 5px;
+  width: 10vw;
+  box-shadow: 0px 0px 5px black;
+  transition: all ease 0.1s;
+  user-select: 0;
+  cursor: pointer;
+}
+.submit:active{
+  background-color: green;
+}
+
+@media (max-width: 576px) {
+	* {
+		font-size: large;
+		color: white;
+	}
+	.contain {
+		height: auto;
+	}
+	.loginForm {
+		width: 100vw;
+		height: 90vh;
+		background-image: linear-gradient(45deg, #b4223b, #5d188b);
+		margin-left: auto !important;
+		margin-right: auto !important;
+		position: fixed;
+  }
+  input{
+    color: black;
+    border-radius: 5px;
+    width: 60vw;
+  }
+  .submit{
+    display: inline-block;
+    background-color: #019421de;
+    border-radius: 5px;
+    width: 30vw;
+    box-shadow: 0px 0px 5px black;
+    transition: all ease 0.1s;
+  }
+  .submit:active{
+    background-color: green;
+  }
+}

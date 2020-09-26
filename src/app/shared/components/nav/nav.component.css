@@ -1,0 +1,100 @@
+nav {
+	min-width: 100vw;
+	height: 10vh;
+	background-color: lightgrey;
+	display: block;
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+.item-logo {
+	padding: 1em;
+	margin: 1em;
+	user-select: none;
+}
+
+.item {
+	display: inline-block;
+	padding: 1em;
+	margin: 1em;
+	cursor: pointer;
+	user-select: none;
+	transition: all ease 0.7s;
+}
+
+.right {
+	float: right;
+}
+
+.logout {
+	color: darkred;
+	background-color: #ff000040;
+}
+
+.mobile {
+	display: none;
+}
+
+.item:hover {
+	background-color: darkgray;
+}
+
+@media (max-width: 576px) {
+	.mobile {
+		display: block;
+	}
+	nav {
+		display: none;
+	}
+
+	.m-contain {
+		width: 100vw;
+		height: 10vh;
+		background-color: tan;
+		overflow: hidden;
+		position: fixed;
+		bottom: 0;
+    text-align: center;
+    z-index: 1090;
+	}
+  .push{
+    height: 10vh;
+  }
+	.m-item {
+		display: inline-block;
+		width: 30vw;
+		background-color: wheat;
+		height: inherit;
+		text-align: center;
+	}
+	.mxlogout {
+		overflow: hidden;
+		position: fixed;
+		top: 5vw;
+		right: 5vw;
+    color: darkred;
+    z-index: 999;
+  }
+  .f-size{
+		font-size: 3rem;
+  }
+
+  .title{
+    margin-top: 1em;
+  }
+
+}
+
+@media(max-width:399px){
+  .m-item{
+    font-size: 0rem;
+  }
+  .title{
+    font-size: small;
+  }
+  .mxlogout{
+    z-index: 999;
+  }
+}

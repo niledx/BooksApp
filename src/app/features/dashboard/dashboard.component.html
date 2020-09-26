@@ -1,0 +1,26 @@
+<div class="contain">
+  <div class="row">
+   <div class="grid-container mx-auto">
+     <div class="col-12" *ngIf="!books">
+       <h3>Book Database is empty at the moment!</h3>
+     </div>
+     <div *ngFor="let book of books" class="card">
+      <div class="row">
+        <div class="col-5">
+          <img src={{book.imgURL}} class="card-img-top" alt="">
+        </div>
+        <div class="col-7 padding-content">
+          <div class="card-body">
+            <h5 class="card-title">{{book.bookName}}</h5>
+            <p class="card-text">Added By: <br><h5>{{book.name}}</h5></p>
+            <p class="card-text">Username: <br><h5>{{book.user ? book.user : 'Unknown'}}</h5></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="push"></div>
+   </div>
+
+
+  </div>
+</div>

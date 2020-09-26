@@ -1,0 +1,26 @@
+<div class="contain">
+  <div class="row mx-md-auto mx-lg-auto mx-sm-5 mx-xl-auto">
+    <div class="col-lg-6 col-sm-10 col-xl-6 col-aligncenter">
+      <div class="loginForm mt-md-5 mt-xl-5 mt-xl-5 text-center">
+        <h2 class="text-uppercase p-5">Login to BooksApp</h2>
+        <div>
+          <div>
+            <label for="user">Username</label><br>
+            <input type="text" id="user" [(ngModel)]="user">
+          </div>
+          <div>
+            <label for="pass">Password</label><br>
+            <input type="password" id="pass" [(ngModel)]="pass" (keyup.enter)="Login()">
+          </div><br>
+          <div *ngIf="error != '' || error$ " class="alert-danger">
+            <span>{{error}} {{error$}}</span>
+          </div><br>
+          <div>
+            <div class="submit" (click)="Login()"><span>Submit</span></div>
+          </div>
+          <span>Don't have a account? <a (click)="goTo('auth/signup')"><i><u>Register</u></i></a> now!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

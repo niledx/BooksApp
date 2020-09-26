@@ -1,0 +1,15 @@
+.contain{
+  width: 100vw;
+  height: 90vh;
+  background-image: url('../../../../assets/reading.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: fixed;
+}
+
+h1{
+  font-size: 3rem;
+  margin-top: 30vh;
+  text-shadow: 2px 2px 2px #67647e;
+}

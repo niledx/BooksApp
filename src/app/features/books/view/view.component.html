@@ -1,0 +1,19 @@
+<div class="col-12" *ngIf="!books">
+  <h3>Your book database is empty at the moment!</h3>
+  <p>Add book to database to be seen here!</p>
+</div>
+<div class="grid-container">
+  <div *ngFor="let book of books" class="card">
+   <div class="row">
+     <div class="col-5">
+       <img src={{book.imgURL}} class="card-img-top" alt="">
+     </div>
+     <div class="col-7 padding-content">
+       <div class="card-body">
+         <h5 class="card-title">{{book.bookName}}</h5>
+         <p class="card-text">Added By: <br><h5>{{book.name}}</h5></p>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>

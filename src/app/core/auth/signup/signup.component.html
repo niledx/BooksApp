@@ -1,0 +1,45 @@
+<div class="contain">
+  <div class="row mx-md-auto mx-lg-auto mx-sm-5 mx-xl-auto">
+    <div class="col-lg-6 col-sm-10 col-xl-6 col-aligncenter">
+      <div class="loginForm mt-md-5 mt-xl-5 mt-xl-5 text-center">
+        <h2 class="text-uppercase p-5">Register to BooksApp</h2>
+        <div>
+          <div>
+            <label for="name">Full Name</label><br>
+            <input placeholder="Enter your display Name" type="text" id="name" [(ngModel)]="name">
+          </div>
+          <div>
+            <label for="user">Username</label><br>
+            <input placeholder="Enter your Username" type="text" id="user" [(ngModel)]="user">
+          </div>
+          <div>
+            <label for="email">Email</label><br>
+            <input placeholder="Enter contact Email" type="text" id="email" [(ngModel)]="email">
+          </div>
+          <div>
+            <label for="phone">Phone</label><br>
+            <input placeholder="+91-XXX-XXX-XXXX" type="text" id="phone" [(ngModel)]="phone">
+          </div>
+          <div>
+            <label for="city">City</label><br>
+            <input placeholder="Enter City Name" type="text" id="city" [(ngModel)]="city">
+          </div>
+          <div>
+            <label for="state">State</label><br>
+            <input placeholder="Enter Name or State Code" type="text" id="state" [(ngModel)]="state">
+          </div>
+          <div>
+            <label for="pass">Password</label><br>
+            <input placeholder="Enter your Password" type="password" id="pass" [(ngModel)]="pass">
+          </div><br>
+          <div>
+            <span *ngIf="error$" >{{error$}}</span>
+          </div><br>
+          <div>
+            <div class="submit" (click)="signUp()"><span>Submit</span></div><br><div class="push"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

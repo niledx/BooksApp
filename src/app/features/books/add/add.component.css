@@ -1,0 +1,33 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-child{
+  grid-column-start: 2;
+  grid-template-columns: auto auto;
+  gap: 1vw;
+}
+
+.input{
+  display: inline-block;
+}
+
+input{
+  border: none;
+  margin: 1vw;
+  background: transparent;
+  border-bottom: 1px solid grey;
+  color: white;
+}
+
+.text, input::placeholder{
+  color: #eee;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}

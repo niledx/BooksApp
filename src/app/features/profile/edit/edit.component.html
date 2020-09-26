@@ -1,0 +1,24 @@
+<div class="profile-body">
+  <div class="content m-3 row mx-auto my-auto">
+    <div class="item mt-3">
+      <label>Name:</label><input class="input" placeholder="{{profile.name ? profile.name : 'Not Provided'}}" type="text" [(ngModel)]="name">
+    </div>
+    <div class="item">
+      <label>Email:</label><input class="input" placeholder="{{profile.email ? profile.email : 'Not Provided'}}" type="text" [(ngModel)]="email">
+    </div>
+    <div class="item">
+      <label>Phone:</label><input class="input" placeholder="{{profile.phone ? profile.phone : 'Not Provided'}}" type="text" [(ngModel)]="phone">
+    </div>
+    <div class="item">
+      <label>City:</label><input class="input" placeholder="{{profile.city ? profile.city : 'Not Provided'}}" type="text" [(ngModel)]="city">
+    </div>
+    <div class="item">
+      <label>State:</label><input class="input" placeholder="{{profile.state ? profile.state : 'Not Provided'}}" type="text" [(ngModel)]="state">
+    </div>
+    <div class="item alert-danger" *ngIf="error">{{error}}</div>
+    <div class="item">
+      <div class="btn btn-primary" (click)="edit()"><span>Submit</span></div>
+      <div class="btn btn-danger" (click)="goto('profile')"><span>Cancel</span></div>
+    </div>
+  </div>
+</div>
